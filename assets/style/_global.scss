@@ -1,0 +1,55 @@
+.button {
+  @extend %button;
+  @include transition();
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: 48px;
+  border-radius: 52px;
+  border: 1px solid $color-white;
+  padding: 0 35px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-bg-1;
+    background-color: $color-white;
+  }
+
+  &--alt {
+    background-color: $color-extra;
+    border-color: $color-extra;
+    color: $color-bg-2;
+
+    &:hover {
+      color: $color-extra;
+      background-color: $color-bg-2;
+    }
+  }
+}
+
+
+.pagination {
+  @include flex(center, center, nowrap);
+
+  @media #{$xl} {
+    flex-direction: column;
+  }
+
+  .swiper-pagination-bullet  {
+    @include transition();
+    width: 20px;
+    height: 20px;
+    margin: 0 6px !important;
+    border: 2px solid $color-white;
+    background-color: transparent;
+
+    @media #{$xl} {
+      margin: 6px 0 !important;
+    }
+
+    &-active {
+      background-color: $color-white;
+    }
+  }
+}

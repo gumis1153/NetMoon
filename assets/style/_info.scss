@@ -1,0 +1,36 @@
+.info {
+  padding: 65px 0 75px;
+  background-color: $color-white;
+
+  @media #{$lg} {
+    padding: 120px 0;
+  }
+
+  &__content,
+  &__actions {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  &__text {
+    @extend %text-big;
+    @extend %text-big--bold;
+    @extend %text-big--title;
+    text-align: center;
+    line-height: 1.2;
+    color: $color-bg-2;
+    margin-bottom: 40px;
+  }
+
+  &__actions {
+    .button {
+      width: 100%;
+
+      @media #{$md} {
+        width: auto;
+      }
+    }
+  }
+}
