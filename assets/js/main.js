@@ -105,8 +105,8 @@ if ($('.feature-list-4__list')) {
   });
 }
 
-if ($('.feature-list-1__swiper')) {
-  const aboutCardSwiper = new Swiper('.feature-list-1__swiper', {
+if ($('.feature-list-1__desktop-swiper')) {
+  const aboutCardSwiper = new Swiper('.feature-list-1__desktop-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     width: 200,
