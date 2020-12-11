@@ -1,0 +1,117 @@
+.stats {
+  padding: 60px 0 30px;
+
+  @media #{$md} {
+    padding: 70px 0 30px;
+  }
+  @media #{$lg} {
+    padding: 140px 0 60px;
+  }
+
+  &__title {
+    @extend %text-huge;
+    @extend %text-huge--bold;
+    text-align: center;
+    margin: 0 auto 45px;
+    width: 85%;
+
+    @media #{$md} {
+      padding: 70px 0 30px;
+    }
+    @media #{$lg} {
+      margin: 0 auto;
+    }
+  }
+
+  &__desc {
+    @extend %text-static-18;
+    @extend %text-static-18--medium;
+    width: 85%;
+    line-height: 120%;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+
+  &__list {
+    @include flex(space-between, center, wrap);
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+
+    @media #{$sm} {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    @media #{$lg} {
+      width: 97%;
+    }
+  }
+
+  &__item {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+
+    @media #{$sm} {
+      width: 50%;
+    }
+    @media #{$lg} {
+      width: 25%;
+    }
+
+    &-value {
+      @extend %text-value;
+      color: $color-extra;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      @extend %text;
+    }
+  }
+
+  &--alt {
+    position: relative;
+    background-color: $color-black;
+    padding: 80px 0 30px;
+    overflow: hidden;
+
+    @media #{$lg} {
+      padding: 60px 0 30px;
+    }
+
+    .stats {
+      &__bg {
+        position: absolute;
+        top: -240%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1920px;
+        @media #{$sm} {
+          top: -320%;
+        }
+        @media #{$lg} {
+          top: -145%;
+        }
+        @media #{$xl} {
+          top: -175%;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      &__desc {
+        margin: 0 auto 125px;
+
+        @media #{$md} {
+          margin: 0 auto 50px;
+        }
+      }
+    }
+  }
+}

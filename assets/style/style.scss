@@ -4,6 +4,28 @@
 @import 'header';
 @import 'home';
 @import 'info';
+@import 'stats';
+@import 'our-team';
+@import 'blog-list';
+@import 'feature-list-1';
+@import 'feature-list-2';
+@import 'feature-list-3';
+@import 'feature-list-4';
+@import 'feature-list-5';
+@import 'services-1-form';
+@import 'home-swiper';
+@import 'team';
+@import 'cards';
+@import 'split-screen';
+@import 'process';
+@import 'newsletter';
+@import 'gallery';
+@import 'enter';
+@import 'blog';
+@import 'project';
+@import 'projects';
+@import 'recruit';
+@import 'contact';
 @import 'footer';
 
 body {
@@ -101,29 +123,6 @@ body {
 
     &--first {
       color: $color-white;
-    }
-  }
-}
-
-.contact {
-  @include flex(flex-start, center, nowrap);
-  flex-direction: column;
-  width: 100%;
-
-  @media #{$lg} {
-    align-items: flex-start;
-  }
-
-  &__item {
-    @include flex(center, center, nowrap);
-    @extend %text;
-    @extend %text--medium;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: $color-secondary;
-
-    svg {
-      margin-right: 5px;
     }
   }
 }

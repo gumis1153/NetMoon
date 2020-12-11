@@ -1,0 +1,308 @@
+.process {
+  margin-top: -170px;
+
+  @media #{$md} {
+    margin-top: -135px;
+  }
+
+  &__title {
+    @extend %text;
+    @extend %text--bold;
+    text-align: center;
+    font-size: 36px;
+    padding: 0 30px;
+    margin-bottom: 50px;
+
+    @media #{$md} {
+      font-size: 46px;
+      margin-bottom: 30px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__desc {
+    @extend %text-static-18;
+    @extend %text-static-18--medium;
+    text-align: center;
+    margin-bottom: 70px;
+    padding: 0 30px;
+
+    @media #{$md} {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    @include flex(space-between, center, nowrap);
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    @media #{$md} {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+    width: 65%;
+    position: relative;
+    margin-bottom: 90px;
+
+    @media #{$sm} {
+      width: 50%;
+    }
+    @media #{$md} {
+      margin-bottom: 0;
+      width: 20%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -22%;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+      height: 45px;
+      width: 70px;
+      background-image: url('../images/arrow-right-pr.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media #{$md} {
+        height: 70px;
+        width: 45px;
+        transform: translateX(0%) rotate(0deg);
+        left: -28%;
+        top: 7%;
+      }
+    }
+
+    &:nth-of-type(1) {
+      &::after {
+        display: none;
+      }
+    }
+
+    &-img {
+      width: 60%;
+      position: relative;
+
+      img,
+      svg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &-index {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: $color-white;
+      color: $color-bg-1;
+      font-weight: 700;
+      font-size: 14px;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      border-radius: 9999px;
+    }
+
+    &-title {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    &-desc {
+      @extend %text;
+      @extend %text--medium;
+      color: $color-secondary;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  &__jobs {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    width: 100%;
+    margin: 45px auto 60px;
+
+    @media #{$lg} {
+      width: 83%;
+      margin: 100px auto 60px;
+    }
+  }
+
+  &__job {
+    @include flex(space-between, center, nowrap);
+    flex-direction: column;
+    width: 100%;
+    background-color: $color-white;
+    border-radius: 40px;
+    padding: 60px 60px 60px 50px;
+    margin-bottom: 35px;
+
+    @media #{$lg} {
+      flex-direction: row;
+      padding: 50px 75px 50px 78px;
+    }
+
+    &-header {
+      @include flex(center, center, nowrap);
+      flex-direction: column;
+      margin-bottom: 45px;
+
+      @media #{$lg} {
+        margin-bottom: 0;
+        align-items: flex-start;
+      }
+    }
+
+    &-name {
+      @extend %text;
+      @extend %text--bold;
+      font-size: 36px;
+      color: $color-extra;
+      width: 100%;
+      margin-bottom: 10px;
+
+      @media #{$lg} {
+        margin-bottom: 0;
+      }
+    }
+
+    &-salary {
+      @include flex(flex-start, center, wrap);
+      @extend %text;
+      @extend %text--medium;
+      color: $color-secondary;
+      text-transform: uppercase;
+
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-extra;
+        margin-left: 5px;
+      }
+    }
+
+    &-text {
+      @extend %text;
+      @extend %text--medium;
+      font-size: 13px;
+      color: $color-secondary;
+      text-align: justify;
+      margin-bottom: 35px;
+
+      @media #{$lg} {
+        font-size: 14px;
+        text-align: left;
+        width: 50%;
+        margin: 0 10px;
+      }
+    }
+
+    &-actions {
+      width: 100%;
+
+      @media #{$lg} {
+        width: 20%;
+      }
+
+      .button {
+        margin: 0 auto;
+        display: block;
+
+        @media #{$lg} {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__perks {
+    margin: 20px auto;
+
+    &-title {
+      @extend %text;
+      @extend %text--bold;
+      text-align: center;
+      font-size: 36px;
+
+      @media #{$md} {
+        font-size: 46px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-desc {
+      @extend %text-static-18;
+      @extend %text-static-18--medium;
+      text-align: center;
+      margin-bottom: 70px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 45px;
+      row-gap: 50px;
+      margin: 90px auto 135px;
+      width: 75%;
+
+      @media #{$md} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media #{$lg} {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &-item {
+      @include flex(space-between, flex-start, nowrap);
+    }
+
+    &-icon {
+      width: 20%;
+      margin-top: 10px;
+
+      img,
+      svg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &-content {
+      @include flex(flex-start, flex-start, nowrap);
+      flex-direction: column;
+      width: 70%;
+    }
+
+    &-header {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      margin-bottom: 5px;
+    }
+
+    &-bottom {
+      @extend %text;
+      @extend %text--medium;
+      color: $color-secondary;
+    }
+  }
+}

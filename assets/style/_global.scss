@@ -26,8 +26,42 @@
       background-color: $color-bg-2;
     }
   }
-}
 
+  &--gray {
+    color: $color-bg-2;
+    border-color: $color-bg-2;
+
+    &:hover {
+      background-color: $color-bg-2;
+      color: $color-white;
+    }
+  }
+
+  &--borderless {
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &--width {
+    min-width: 197px;
+  }
+
+  &--small {
+    height: 37px;
+    font-size: 13px;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-bg-1;
+
+    &:hover {
+      background-color: $color-bg-1;
+      color: $color-white;
+    }
+  }
+}
 
 .pagination {
   @include flex(center, center, nowrap);
@@ -36,7 +70,7 @@
     flex-direction: column;
   }
 
-  .swiper-pagination-bullet  {
+  .swiper-pagination-bullet {
     @include transition();
     width: 20px;
     height: 20px;
@@ -50,6 +84,328 @@
 
     &-active {
       background-color: $color-white;
+    }
+  }
+}
+
+.arrow-down {
+  @include transition();
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: up-down 5s ease-in-out infinite;
+
+  @media #{$md} {
+    opacity: 0;
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.margin-minus {
+  margin-top: -290px;
+}
+
+.checkbox {
+  @include transition();
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  @include transition();
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  @include transition();
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: transparent;
+  border: 1px solid $color-secondary;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  @include transition();
+  background-color: transparent;
+  border: 1px solid $color-secondary;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  @include transition();
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  @include transition();
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  @include transition();
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid $color-extra;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  // opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  // opacity: 1;
+  // transform: scale(1.01);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: $color-extra;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  // background: #4CAF50;
+  cursor: pointer;
+}
+
+.form {
+  @include flex(space-between, center, wrap);
+  margin: 70px auto 0;
+
+  @media #{$md} {
+    width: 70%;
+    margin: 95px auto 0;
+  }
+
+  &__col {
+    @include flex(space-between, flex-start, wrap);
+    width: 100%;
+
+    @media #{$lg} {
+      width: 48%;
+
+    }
+  }
+
+  &-input {
+    border-radius: 44px;
+    width: 100%;
+    background-color: $color-swiper-item;
+    height: 37px;
+    margin-bottom: 15px;
+
+    @media #{$md} {
+      width: 49%;
+    }
+
+    input {
+      font-family: $font-main;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      color: $color-white;
+      padding: 0 30px;
+
+      &::-webkit-input-placeholder {
+        color: $color-white;
+      }
+    }
+
+    &--width,
+    &--textarea {
+      width: 100%;
+    }
+
+    &--textarea {
+      height: 165px;
+      border-radius: 16px;
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        font-family: $font-main;
+        color: $color-white;
+        padding: 10px 30px;
+        resize: none;
+
+        &::-webkit-input-placeholder {
+          color: $color-white;
+        }
+      }
+    }
+
+    &--range {
+      position: relative;
+      height: 2px;
+      background-color: $color-extra;
+      border-radius: 0;
+      margin-top: -13px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: rgba($color-bg-1, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-40%);
+      }
+
+      input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        padding: 0;
+
+        &::-webkit-slider-thumb {
+          #thumb {
+            background-color: $color-extra;
+          }
+        }
+      }
+
+      &.active {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &--checkbox {
+      @include flex(felx-start, felx-start, nowrap);
+      background-color: transparent;
+
+      input {
+        width: 13px;
+        height: 13px;
+        border: 1px solid $color-white;
+      }
+    }
+
+    &-range {
+      @include flex(space-between, flex-start, nowrap);
+      margin-top: 10px;
+
+      span {
+        font-size: 13px;
+      }
+    }
+
+    &--file {
+      @include flex(space-between, center, nowrap);
+      position: relative;
+      background-color: $color-white;
+      padding: 0 20px;
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 2.8;
+        padding: 0 45px 0 100px;
+        cursor: pointer;
+        color: $color-bg-1;
+
+        &::-webkit-file-upload-button {
+          display: none;
+        }
+      }
+    }
+
+    &--file-text {
+      @extend %text-small;
+      @extend %text-small--bold;
+      color: $color-bg-1;
+      white-space: nowrap;
+      line-height: 2.8;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+
+  .button {
+    margin: 60px auto 0;
+    width: 100%;
+
+    @media #{$sm} {
+      width: fit-content;
+      margin: 80px auto 0;
+    }
+  }
+
+  &--flex {
+    .form {
+      &-title {
+        width: 100%;
+      }
+      &-container {
+        @include flex(space-between, flex-start, wrap);
+      }
     }
   }
 }

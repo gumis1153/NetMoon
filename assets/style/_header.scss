@@ -1,11 +1,23 @@
 .header {
+  @include transition();
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
 
+  &.active {
+    background-color: $color-bg-1;
+
+   .header {
+     &__container {
+       height: 100px;
+     }
+   }
+  }
+
   &__container {
+    @include transition();
     @include flex(space-between, center, nowrap);
     width: 83%;
     height: 100px;
@@ -184,6 +196,17 @@
 
     @media #{$lg} {
       @include flex(flex-start, center, nowrap);
+    }
+  }
+
+  .language {
+   
+
+    @media #{$lg} {
+      margin-left: 15px;
+    }
+    @media #{$xl} {
+      margin-left: 55px;
     }
   }
 }

@@ -1,277 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="./assets/style/external/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <title>NetMoon</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header__container">
-        <div class="header__logo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/style/external/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>NetMoon</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <a href="#">
+          <img src="./assets/images/logo.svg" alt="Logo" />
+        </a>
+      </div>
+      <!-- / header__logo -->
+
+      <nav id="menu" class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-list-item">
+            <a href="#">Projects</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#">Services</a>
+          </li>
+          <li class="header__menu-list-item header__menu-list-item--active">
+            <a href="#">Blog</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#">Contact</a>
+          </li>
+          <li class="header__menu-list-item header__menu-list-item--button">
+            <a href="#" class="button">Wyceń projekt</a>
+          </li>
+          <li class="header__menu-list-item header__menu-list-item--button">
+            <a href="#">
+
+              <a href="#">
+                <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
+              </a>
+
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- / header__menu -->
+
+      <div class="header__actions">
+        <a href="#" class="button">Wyceń projekt</a>
+
+        <div class="language">
           <a href="#">
-            <img src="./assets/images/logo.svg" alt="Logo" />
+            <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
           </a>
         </div>
-        <!-- / header__logo -->
+      </div>
+      <!-- / header__actions -->
 
-        <nav id="menu" class="header__menu">
-          <ul class="header__menu-list">
-            <li class="header__menu-list-item">
-              <a href="#">Projects</a>
-            </li>
-            <li class="header__menu-list-item header__menu-list-item--active">
-              <a href="#">Services</a>
-            </li>
-            <li class="header__menu-list-item">
-              <a href="#">Blog</a>
-            </li>
-            <li class="header__menu-list-item">
-              <a href="#">Contact</a>
-            </li>
-            <li class="header__menu-list-item header__menu-list-item--button">
-              <a href="#" class="button">Wyceń projekt</a>
-            </li>
-            <li class="header__menu-list-item header__menu-list-item--button">
-              <a href="#"></a>
-            </li>
-          </ul>
-        </nav>
-        <!-- / header__menu -->
+      <div id="headerMenuBtn" class="hamburger header__menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <!-- / header -->
 
-        <div class="header__actions">
-          <a href="#" class="button">Wyceń projekt</a>
+  <section class="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+          <div class="home__container">
+            <div class="home__img">
+              <img src="./assets/images/phone.png" alt="Telefon" />
+            </div>
+            <!-- / home__img -->
 
-          <div class="language"></div>
-        </div>
-        <!-- / header__actions -->
+            <div class="home__content">
+              <h1>
+                Lorem ipsum dolor sit amet, <br />
+                consectetur adipiscing
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              <div class="home__actions">
+                <a href="#" class="button button--alt">Lorem</a>
+                <a href="#" class="button">Lorem</a>
+              </div>
+            </div>
 
-        <div id="headerMenuBtn" class="hamburger header__menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+            <!-- / home__content -->
+          </div>
+          <!-- / home__container -->
         </div>
       </div>
-    </header>
-    <!-- / header -->
+    </div>
+  </section>
+  <!-- / home -->
 
-    <section class="home">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-10 offset-lg-1">
-            <div class="home__container">
-              <div class="home__img">
-                <img src="./assets/images/phone.png" alt="Telefon" />
+  <section class="home-swiper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="home-swiper__desktop-swiper">
+            <div class="home-swiper__desktop-swiper-item" data-index="1">
+              <div class="home-swiper__desktop-swiper-item-desc">
+                <h3 class="home-swiper__desktop-swiper-item-title">Recent work</h3>
+                <h2 class="home-swiper__desktop-swiper-item-name">Project Name</h2>
+                <h3 class="home-swiper__desktop-swiper-item-subname">UX/UI Web Dev</h3>
+                <a href="#" class="home-swiper__desktop-swiper-item-link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
               </div>
-                <!-- / home__img -->
-          
-              <div class="home__content">
-                <h1>
-                  Lorem ipsum dolor sit amet, <br />
-                  consectetur adipiscing
-                </h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <div class="home__actions">
-                  <a href="#" class="button button--alt">Lorem</a>
-                  <a href="#" class="button">Lorem</a>
+              <div class="home-swiper__desktop-swiper-item-img">
+                <img src="./assets/images/laptop.png" alt="Projekt" />
+              </div>
+              <div class="home-swiper__desktop-swiper-item-actions">
+
+              </div>
+            </div>
+            <!-- / home__desktop-swiper-item -->
+            <div class="home-swiper__desktop-swiper-item" data-index="2">
+              <div class="home-swiper__desktop-swiper-item-desc">
+                <h3 class="home-swiper__desktop-swiper-item-title">Recent work2</h3>
+                <h2 class="home-swiper__desktop-swiper-item-name">Project Name</h2>
+                <h3 class="home-swiper__desktop-swiper-item-subname">UX/UI Web Dev</h3>
+                <a href="#" class="home-swiper__desktop-swiper-item-link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
+              </div>
+              <div class="home-swiper__desktop-swiper-item-img">
+                <img src="./assets/images/laptop.png" alt="Projekt" />
+              </div>
+              <div class="home-swiper__desktop-swiper-item-actions">
+
+              </div>
+            </div>
+            <!-- / home__desktop-swiper-item -->
+            <div class="home-swiper__desktop-swiper-item" data-index="3">
+              <div class="home-swiper__desktop-swiper-item-desc">
+                <h3 class="home-swiper__desktop-swiper-item-title">Recent work3</h3>
+                <h2 class="home-swiper__desktop-swiper-item-name">Project Name</h2>
+                <h3 class="home-swiper__desktop-swiper-item-subname">UX/UI Web Dev</h3>
+                <a href="#" class="home-swiper__desktop-swiper-item-link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
+              </div>
+              <div class="home-swiper__desktop-swiper-item-img">
+                <img src="./assets/images/laptop.png" alt="Projekt" />
+              </div>
+              <div class="home-swiper__desktop-swiper-item-actions">
+
+              </div>
+            </div>
+            <!-- / home__desktop-swiper-item -->
+
+            <div class="home-swiper__desktop-swiper-pagination">
+              <div class="home-swiper__desktop-swiper-dot" data-index="1"></div>
+              <div class="home-swiper__desktop-swiper-dot" data-index="2"></div>
+              <div class="home-swiper__desktop-swiper-dot" data-index="3"></div>
+            </div>
+          </div>
+          <div class="home-swiper__mobile-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="swiper-slide__title">RECENT  WORK</h3>
+                <h2 class="swiper-slide__name">Project Name</h2>
+                <h3 class="swiper-slide__subname">UX/UI WEB DEV</h3>
+                <div class="swiper-slide__img">
+                  <img src="./assets/images/laptop.png" alt="Projekt" />
+                </div>
+                <a href="#" class="swiper-slide__link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="swiper-slide__title">RECENT  WORK2</h3>
+                <h2 class="swiper-slide__name">Project Name</h2>
+                <h3 class="swiper-slide__subname">UX/UI WEB DEV</h3>
+                <div class="swiper-slide__img">
+                  <img src="./assets/images/laptop.png" alt="Projekt" />
+                </div>
+                <a href="#" class="swiper-slide__link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="swiper-slide__title">RECENT  WORK3</h3>
+                <h2 class="swiper-slide__name">Project Name</h2>
+                <h3 class="swiper-slide__subname">UX/UI WEB DEV</h3>
+                <div class="swiper-slide__img">
+                  <img src="./assets/images/laptop.png" alt="Projekt" />
+                </div>
+                <a href="#" class="swiper-slide__link">
+                  <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / home-swiper -->
+
+  <section class="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-10 col-xxl-8 offset-xl-1 offset-xxl-2">
+          <div class="info__content">
+            <h3 class="info__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet
+            </h3>
+            <div class="info__actions">
+              <a href="#" class="button button--alt button--borderless">About us</a>
+            </div>
+          </div>
+          <!-- / info__content -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / info -->
+
+  <section class="stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+          <h2 class="stats__title">What our Clients say about us?</h2>
+        </div>
+        <div class="col-12 col-lg-6 offset-lg-3">
+          <p class="stats__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <div class="stats__list">
+            <div class="stats__item">
+              <span class="stats__item-value">10</span>
+              <p class="stats__item-title">Lorem ipsum dolor sit</p>
+            </div>
+            <div class="stats__item">
+              <span class="stats__item-value">200+</span>
+              <p class="stats__item-title">Lorem ipsum dolor sit</p>
+            </div>
+            <div class="stats__item">
+              <span class="stats__item-value">60+</span>
+              <p class="stats__item-title">Lorem ipsum dolor sit</p>
+            </div>
+            <div class="stats__item">
+              <span class="stats__item-value">22</span>
+              <p class="stats__item-title">Lorem ipsum dolor sit</p>
+            </div>
+          </div>
+          <!-- / stats__list -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / stats -->
+
+  <section class="our-team">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+          <h2 class="our-team__title">Meet our team!</h2>
+          <div class="our-team__list">
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+            <div class="our-team__item">
+              <a href="#" class="our-team__item-link">
+                <img src="./assets/images/team.png" alt="Team member" />
+              </a>
+            </div>
+          </div>
+          <!-- / our-team__list -->
+          <div class="our-team__actions">
+            <a href="#" class="button button--gray">View more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / our-team -->
+
+  <section class="blog-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <h2 class="blog-list__title">Check out our blog!</h2>
+
+          <div class="blog-list__list">
+            <div class="blog-list__item">
+              <p class="blog-list__item-subtitle">Technology</p>
+              <p class="blog-list__item-title">Summer 2020 Update</p>
+              <p class="blog-list__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="blog-list__item-author">
+                <div class="blog-list__item-data">
+                  <p class="blog-list__item-name">Adam Kowalski</p>
+                  <p class="blog-list__item-date">Sept 4</p>
+                </div>
+                <div class="blog-list__item-user">
+                  <img src="./assets/images/team.png" alt="Author photo" />
                 </div>
               </div>
-          
-              <!-- / home__content -->
             </div>
-            <!-- / home__container -->
-          </div>
-      
-          <div class="col-12">
-            <div class="home__swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="home__swiper-item">
-                    <!-- <p class="home__swiper-item-title">Recent work</p> -->
-                    <div class="home__swiper-item-desc">
-                      <h3 class="home__swiper-item-title">Recent work</h3>
-                      <h2 class="home__swiper-item-name">Project Name</h2>
-                      <h3 class="home__swiper-item-subname">UX/UI Web Dev</h3>
-                    </div>
-                    <div class="home__swiper-item-img">
-                      <img src="./assets/images/laptop.png" alt="Projekt" />
-                    </div>
-                    <div class="home__swiper-item-actions">
-                      <a href="#" class="home__swiper-item-link">
-                        <img
-                          src="./assets/images/arrow-right.svg"
-                          alt="Link do projektu"
-                          class="injectable"
-                        />
-                      </a>
-                  </div>
-                  </div>
-                  <!-- / home__swiper-item -->
-                </div> <div class="swiper-slide">
-                  <div class="home__swiper-item">
-                    <!-- <p class="home__swiper-item-title">Recent work</p> -->
-                    <div class="home__swiper-item-desc">
-                      <h3 class="home__swiper-item-title">Recent work</h3>
-                      <h2 class="home__swiper-item-name">Project Name</h2>
-                      <h3 class="home__swiper-item-subname">UX/UI Web Dev</h3>
-                    </div>
-                    <div class="home__swiper-item-img">
-                      <img src="./assets/images/laptop.png" alt="Projekt" />
-                    </div>
-                    <div class="home__swiper-item-actions">
-                      <a href="#" class="home__swiper-item-link">
-                        <img
-                          src="./assets/images/arrow-right.svg"
-                          alt="Link do projektu"
-                          class="injectable"
-                        />
-                      </a>
-                  </div>
-                  </div>
-                  <!-- / home__swiper-item -->
-                </div> <div class="swiper-slide">
-                  <div class="home__swiper-item">
-                    <!-- <p class="home__swiper-item-title">Recent work</p> -->
-                    <div class="home__swiper-item-desc">
-                      <h3 class="home__swiper-item-title">Recent work</h3>
-                      <h2 class="home__swiper-item-name">Project Name</h2>
-                      <h3 class="home__swiper-item-subname">UX/UI Web Dev</h3>
-                    </div>
-                    <div class="home__swiper-item-img">
-                      <img src="./assets/images/laptop.png" alt="Projekt" />
-                    </div>
-                    <div class="home__swiper-item-actions">
-                      <a href="#" class="home__swiper-item-link">
-                        <img
-                          src="./assets/images/arrow-right.svg"
-                          alt="Link do projektu"
-                          class="injectable"
-                        />
-                      </a>
-                  </div>
-                  </div>
-                  <!-- / home__swiper-item -->
-                </div> 
-              </div>
-
-              <div class="home__swiper-pagination pagination"></div>
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </section>
-    <!-- / home -->
-
-    <section class="info">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-10 col-xxl-8 offset-xl-1 offset-xxl-2">
-            <div class="info__content">
-              <h3 class="info__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
-              </h3>
-              <div class="info__actions">
-                <a href="#" class="button button--alt">About us</a>
+            <!-- / blog-list__item -->
+            <div class="blog-list__item">
+              <p class="blog-list__item-subtitle">Technology</p>
+              <p class="blog-list__item-title">Summer 2020 Update</p>
+              <p class="blog-list__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="blog-list__item-author">
+                <div class="blog-list__item-data">
+                  <p class="blog-list__item-name">Adam Kowalski</p>
+                  <p class="blog-list__item-date">Sept 4</p>
+                </div>
+                <div class="blog-list__item-user">
+                  <img src="./assets/images/team.png" alt="Author photo" />
+                </div>
               </div>
             </div>
-            <!-- / info__content -->
+            <!-- / blog-list__item -->
+            <div class="blog-list__item">
+              <p class="blog-list__item-subtitle">Technology</p>
+              <p class="blog-list__item-title">Summer 2020 Update</p>
+              <p class="blog-list__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="blog-list__item-author">
+                <div class="blog-list__item-data">
+                  <p class="blog-list__item-name">Adam Kowalski</p>
+                  <p class="blog-list__item-date">Sept 4</p>
+                </div>
+                <div class="blog-list__item-user">
+                  <img src="./assets/images/team.png" alt="Author photo" />
+                </div>
+              </div>
+            </div>
+            <!-- / blog-list__item -->
+          </div>
+          <!-- / blog-list__list -->
 
+          <div class="blog-list__actions">
+            <a href="#" class="button button--width">View more</a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- / info -->
+    </div>
+  </section>
+  <!-- / blog-list -->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0">
-            <div class="footer__info">
-              <div class="footer__img">
-                <img src="./assets/images/logo.svg" alt="Logo NetMoon" />
+  <section class="feature-list-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="feature-list-1__title">Technologie</h2>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
+          <p class="feature-list-1__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="feature-list-1__desktop-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
               </div>
-              <ul class="socials">
-                <li class="socials__item">
-                  <a href="#">
-                    <img
-                      src="./assets/images/youtube.svg"
-                      alt="Youtube kanał"
-                      class="injectable"
-                    />
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#">
-                    <img
-                      src="./assets/images/facebook.svg"
-                      alt="Profil na facebook"
-                      class="injectable"
-                    />
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#">
-                    <img
-                      src="./assets/images/messenger.svg"
-                      alt="Messenger"
-                      class="injectable"
-                    />
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#">
-                    <img
-                      src="./assets/images/discord.svg"
-                      alt="Discord"
-                      class="injectable"
-                    />
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#">
-                    <img
-                      src="./assets/images/twitter.svg"
-                      alt="Twitter"
-                      class="injectable"
-                    />
-                  </a>
-                </li>
-              </ul>
-              <ul class="loc">
-                <li class="loc__item loc__item--first">Netmoon</li>
-                <li class="loc__item">ul. Karatowa 74</li>
-                <li class="loc__item">Warszawa</li>
-                <li class="loc__item">02-490 Poland</li>
-              </ul>
-              <ul class="contact">
-                <li class="contact__item">
-                  <img src="./assets/images/phone.svg" class="injectable">
-                 <a href="tel:+48505606707">505 606 707</a> 
-                </li>
-                <li class="contact__item">
-                  <img src="./assets/images/mail.svg" class="injectable">
-                  <a href="mailto:contact@mail.coml">contact@mail.com</a> 
-                </li>
-              </ul>
-              <span class="copy">&COPY; 2020 Netmoon</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img src="./assets/images/mobile-appsvg.svg" alt="Logo NetMoon" class="injectable" />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / feature-list-1 -->
+
+  <section class="split-screen">
+    <a href="#" class="split-screen__item">
+      <div class="split-screen__item-bg">
+        <img src="./assets/images/split1.png" alt="Image" />
+      </div>
+      <p class="split-screen__item-subtitle">Projects</p>
+      <p class="split-screen__item-title">Check out our work!</p>
+      <div class="split-screen__item-img">
+        <img src="./assets/images/arrow-right.svg" alt="Image" />
+      </div>
+    </a>
+    <a href="#" class="split-screen__item">
+      <div class="split-screen__item-bg">
+        <img src="./assets/images/split2.png" alt="Image" />
+      </div>
+      <p class="split-screen__item-subtitle">Services</p>
+      <p class="split-screen__item-title">Help your business?</p>
+      <div class="split-screen__item-img">
+        <img src="./assets/images/arrow-right.svg" alt="Image" />
+      </div>
+    </a>
+  </section>
+  <!-- / split-screen -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0">
+          <div class="footer__info">
+            <div class="footer__img">
+              <img src="./assets/images/logo.svg" alt="Logo NetMoon" />
+            </div>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#">
+                  <img src="./assets/images/youtube.svg" alt="Youtube kanał" class="injectable" />
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#">
+                  <img src="./assets/images/facebook.svg" alt="Profil na facebook" class="injectable" />
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#">
+                  <img src="./assets/images/messenger.svg" alt="Messenger" class="injectable" />
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#">
+                  <img src="./assets/images/discord.svg" alt="Discord" class="injectable" />
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#">
+                  <img src="./assets/images/twitter.svg" alt="Twitter" class="injectable" />
+                </a>
+              </li>
+            </ul>
+            <ul class="loc">
+              <li class="loc__item loc__item--first">Netmoon</li>
+              <li class="loc__item">ul. Karatowa 74</li>
+              <li class="loc__item">Warszawa</li>
+              <li class="loc__item">02-490 Poland</li>
+            </ul>
+            <ul class="footer__contact">
+              <li class="footer__contact-item">
+                <img src="./assets/images/phone.svg" class="injectable" />
+                <a href="tel:+48505606707">505 606 707</a>
+              </li>
+              <li class="footer__contact-item">
+                <img src="./assets/images/mail.svg" class="injectable" />
+                <a href="mailto:contact@mail.coml">contact@mail.com</a>
+              </li>
+            </ul>
+            <span class="copy">&COPY; 2020 Netmoon</span>
           </div>
-          <div class="col-12 col-lg-8 col-xl-6">
-            <div class="footer__col">
+        </div>
+        <div class="col-12 col-lg-8 col-xl-6">
+          <div class="footer__col">
             <nav class="footer__menu">
               <p class="footer__menu-title">Get in touch</p>
               <ul class="footer__menu-list">
@@ -281,35 +616,71 @@
                 <li class="footer__menu-item"><a href="#">Latest news</a></li>
               </ul>
             </nav>
-          
-        
-          <nav class="footer__menu">
-            <p class="footer__menu-title">Latest News</p>
-            <ul class="footer__menu-list">
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-            </ul>
-          </nav>
-        
-          <nav class="footer__menu">
-            <p class="footer__menu-title">Menu</p>
-            <ul class="footer__menu-list">
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-              <li class="footer__menu-item"><a href="#">Latest news</a></li>
-            </ul>
-          </nav>
+
+            <nav class="footer__menu">
+              <p class="footer__menu-title">Latest News</p>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer__menu">
+              <p class="footer__menu-title">Menu</p>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                <li class="footer__menu-item"><a href="#">Latest news</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        </div>
-        
       </div>
-    </footer>
-    <script src="./assets/js//external/jquery-3.5.1.slim.min.js"></script>
-    <script src="./assets/js/external/svg-inject.min.js"></script>
-    <script src="./assets/js/external/swiper-bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-  </body>
+    </div>
+  </footer>
+
+  <section class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <div class="newsletter__container">
+            <div class="newsletter__content">
+              <p class="newsletter__content-header">
+                Zasubskrybuj nasz newsletter
+              </p>
+              <p class="newsletter__content-bottom">
+                Otrzymaj zniżkę 5% na swoje zamówienie
+              </p>
+            </div>
+            <form action="" class="newsletter__form">
+              <div class="newsletter__input">
+                <input type="email" placeholder="Wpisz swój adres email" />
+                <button class="newsletter__input-submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / newsletter -->
+
+  <div class="arrow-down">
+    <img src="./assets/images/arrow-down.svg" class="injectable">
+  </div>
+
+  <script src="./assets/js//external/jquery-3.5.1.slim.min.js"></script>
+  <script src="./assets/js/external/svg-inject.min.js"></script>
+  <script src="./assets/js/external/swiper-bundle.min.js"></script>
+  <script src="./assets/js/external/masonry.pkgd.min.js"></script>
+  <script src="./assets/js/swipe.js"></script>
+  <script src="https://kit.fontawesome.com/c92cd164f4.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

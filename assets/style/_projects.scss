@@ -1,0 +1,137 @@
+.projects {
+  margin-top: -180px;
+  overflow: hidden;
+
+  @media #{$md} {
+    margin-top: -425px;
+  }
+
+  &__list {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+  }
+
+  &__item {
+    @include flex(space-between, center, nowrap);
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-bottom: 60px;
+
+    @media #{$md} {
+      flex-direction: row;
+
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+
+        .projects {
+          &__item {
+            &-desc {
+              align-items: flex-end;
+            }
+
+            &-name,
+            &-subname {
+              text-align: right;
+            }
+
+            &-link {
+              transform: scaleX(-1);
+
+              &:hover {
+                transform: scaleX(-1) translateX(10px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-desc {
+      @include flex(space-between, center, nowrap);
+      background-color: $color-swiper-item;
+      box-sizing: content-box;
+      border-right: 50px solid $color-swiper-item;
+      border-left: 50px solid $color-swiper-item;
+      width: 100%;
+      padding: 20px;
+
+      @media #{$sm} {
+        box-sizing: border-box;
+        border-right: 0;
+        border-left: 0;
+      }
+
+      @media #{$md} {
+        @include flex(flex-start, flex-start, nowrap);
+        flex-direction: column;
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+
+    &-head {
+      @extend %text-static-18;
+      @extend %text-static-18--medium;
+      display: none;
+      text-transform: uppercase;
+      color: $color-secondary;
+      margin-bottom: 60px;
+
+      @media #{$md} {
+        display: block;
+      }
+    }
+
+    &-content {
+      height: 100%;
+
+      @media #{$sm} {
+        height: auto;
+      }
+    }
+
+    &-name {
+      @extend %text;
+      @extend %text--bold;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    &-subname {
+      @extend %text-static-18;
+      @extend %text-static-18--medium;
+    }
+
+    &-link {
+      @include transition();
+      display: inline-block;
+
+      @media #{$md} {
+        margin-top: 60px;
+      }
+
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+
+    &-img {
+      @include flex(center, center, nowrap);
+      width: 100%;
+      margin-bottom: 105px;
+
+      @media #{$xl} {
+        height: 680px;
+        width: 68%;
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        // margin-right: auto;
+      }
+    }
+  }
+}

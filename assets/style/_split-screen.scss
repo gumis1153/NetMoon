@@ -1,0 +1,97 @@
+.split-screen {
+  @include flex(flex-start, flex-start, nowrap);
+
+  &__item {
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+    position: relative;
+    min-height: 175px;
+    width: 50%;
+
+    @media #{$sm} {
+      min-height: 408px;
+    }
+
+    &:hover {
+        .split-screen {
+            &__item {
+                &-bg {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+          @include transition();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-subtitle {
+      @extend %text-small;
+      @extend %text-small--medium;
+      text-transform: uppercase;
+      text-align: center;
+      color: $color-extra;
+      margin-bottom: 10px;
+      z-index: 9;
+
+      @media #{$md} {
+        font-size: 18px;
+      }
+    }
+
+    &-title {
+      @extend %text;
+      @extend %text--medium;
+      text-align: center;
+      margin-bottom: 10px;
+      z-index: 9;
+
+      @media #{$sm} {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+      @media #{$md} {
+        font-size: 32px;
+      }
+      @media #{$lg} {
+        font-size: 46px;
+      }
+      @media #{$xl} {
+        font-size: 52px;
+      }
+      @media #{$xxl} {
+        font-size: 64px;
+      }
+    }
+
+    &-img {
+      max-width: 20px;
+      z-index: 9;
+
+      @media #{$sm} {
+        max-width: fit-content;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

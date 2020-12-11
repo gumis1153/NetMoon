@@ -5,6 +5,21 @@
   &--medium {
     font-weight: 500;
   }
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+%text-small {
+  font-size: 13px;
+  line-height: normal;
+
+  &--medium {
+    font-weight: 500;
+  }
+  &--bold {
+    font-weight: 700;
+  }
 }
 
 %text-medium {
@@ -13,6 +28,18 @@
 
   &--medium {
     font-weight: 500;
+  }
+}
+
+%text-bigger {
+  font-size: 24px;
+  line-height: normal;
+
+  &--medium {
+    font-weight: 500;
+  }
+  &--bold {
+    font-weight: 700;
   }
 }
 
@@ -36,6 +63,60 @@
   &--bold {
     font-weight: 700;
   }
+}
+
+%text-huge {
+  font-size: 36px;
+  line-height: normal;
+
+  @media #{$md} {
+    font-size: 42px;
+  }
+  @media #{$lg} {
+    font-size: 48px;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+%text-title {
+  font-size: 36px;
+  line-height: normal;
+
+  @media #{$md} {
+    font-size: 42px;
+  }
+  @media #{$lg} {
+    font-size: 64px;
+  } 
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+%text-static-18 {
+  font-size: 18px;
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+%text-value {
+  font-size: 72px;
+  line-height: 112.5%;
+  font-weight: 700;
 }
 
 %menu-text {

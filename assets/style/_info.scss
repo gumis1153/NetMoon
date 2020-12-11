@@ -33,4 +33,14 @@
       }
     }
   }
+
+  &--alt {
+    background-color: $color-black;
+
+    .info {
+      &__text {
+        color: $color-white;
+      }
+    }
+  }
 }
