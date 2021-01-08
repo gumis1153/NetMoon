@@ -1,499 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style/external/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/style/external/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/style/external/aos.css"
+    />
     <link rel="stylesheet" href="./assets/style/style.css" />
     <title>NetMoon</title>
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#111319">
-    <meta name="msapplication-TileColor" content="#111319">
-    <meta name="theme-color" content="#111319">
-</head>
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#111319"
+    />
+    <meta name="msapplication-TileColor" content="#111319" />
+    <meta name="theme-color" content="#111319" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__container">
-            <div class="header__logo">
-                <a href="#">
-                    <img src="./assets/images/logo.svg" alt="Logo" />
-                </a>
-            </div>
-            <!-- / header__logo -->
-
-            <nav id="menu" class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-list-item">
-                        <a href="#">Projects</a>
-                    </li>
-                    <li class="header__menu-list-item">
-                        <a href="#">Services</a>
-                    </li>
-                    <li class="header__menu-list-item header__menu-list-item--active">
-                        <a href="#">Blog</a>
-                    </li>
-                    <li class="header__menu-list-item">
-                        <a href="#">Contact</a>
-                    </li>
-                    <li class="header__menu-list-item header__menu-list-item--button">
-                        <a href="#" class="button">Wyceń projekt</a>
-                    </li>
-                    <li class="header__menu-list-item header__menu-list-item--button">
-                        <a href="#">
-
-                            <a href="#">
-                                <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
-                            </a>
-
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- / header__menu -->
-
-            <div class="header__actions">
-                <a href="#" class="button">Wyceń projekt</a>
-
-                <div class="language">
-                    <a href="#">
-                        <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
-                    </a>
-                </div>
-            </div>
-            <!-- / header__actions -->
-
-            <div id="headerMenuBtn" class="hamburger header__menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="#">
+            <img src="./assets/images/logo.svg" alt="Logo" />
+          </a>
         </div>
+        <!-- / header__logo -->
+        <div class="header__blur"></div>
+        
+        <nav id="menu" class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-list-item">
+              <a href="#">Projects</a>
+            </li>
+            <li class="header__menu-list-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="header__menu-list-item header__menu-list-item--active">
+              <a href="#">Blog</a>
+            </li>
+            <li class="header__menu-list-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="header__menu-list-item header__menu-list-item--button">
+              <a href="#" class="button">Wyceń projekt</a>
+            </li>
+            <li class="header__menu-list-item header__menu-list-item--button">
+              <a href="#">
+                <a href="#">
+                  <img
+                    src="./assets/images/lang-pol.svg"
+                    alt="Wybór języka - polski"
+                    class="injectable"
+                  />
+                </a>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- / header__menu -->
+
+        <div class="header__actions">
+          <a href="#" class="button">Wyceń projekt</a>
+
+          <div class="language">
+            <a href="#">
+              <img
+                src="./assets/images/lang-pol.svg"
+                alt="Wybór języka - polski"
+                class="injectable"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- / header__actions -->
+
+        <div id="headerMenuBtn" class="hamburger header__menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </header>
     <!-- / header -->
 
-    <section class="enter enter--big-btns" style="background-image: url(./assets/images/services-bg.png)">
-        <div class="enter__blur">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="enter__content">
-                            <h4 class="enter__subtitle">About</h4>
-                            <h2 class="enter__title">Hello!</h2>
-                        </div>
-                        <div class="col-12 col-xl-8 offset-xl-2">
-                            <p class="enter__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
+    <section
+      class="enter enter--top"
+      style="background-image: url(./assets/images/about-bg.png)"
+    >
+      <div class="enter__blur">
+        <div class="container">
+          <div class="row">
+            <div class="col-12" >
+              <div class="enter__content"  data-aos="fade-up"  data-aos-delay="50">
+                <h4 class="enter__subtitle">About</h4>
+                <h2 class="enter__title">Hello!</h2>
+              </div>
+              <div class="col-12 col-xl-8 offset-xl-2  data-aos="fade-up"  data-aos-delay="50"">
+                <p class="enter__desc"  data-aos="fade-up"  data-aos-delay="50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+              </div>
+              <div class="col-12 col-xl-8 offset-xl-2"  data-aos="fade-up"  data-aos-delay="50">
+                <div class="enter__logo">
+                  <img src="./assets/images/logo.svg" class="injectable" />
+                  <img
+                    src="./assets/images/logo.svg"
+                    class="injectable enter__logo-bg"
+                  />
                 </div>
+                <p class="enter__title-2">Lorem ipsum</p>
+
+                <div class="enter__desc enter__desc--long">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- / enter -->
 
-    <section class="feature-list-3 feature-list-3--single">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="feature-list-3__list">
-                        <div class="feature-list-3__item">
-                            <div class="feature-list-3__item-content">
-                                <h4 class="feature-list-3__item-title">Product Design</h4>
-                                <p class="feature-list-3__item-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua.
-                                </p>
-                            </div>
-                            <div class="feature-list-3__item-img">
-                                <img src="./assets/images/undraw_design_notes_8dmv 1.png" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- / feature-list-3 -->
-
     <section class="cards">
-        <div class="cards__swiper">
-            <div class="swiper-wrapper">
-                <div id="card1" class="swiper-slide">
-                    <div class="cards__item">
-                        <div class="cards__item-img">
-                            <img src="./assets/images/team.png" alt="Image">
-                        </div>
-                        <p class="cards__item-name">
-                            Adam Kowalski
-                        </p>
-                        <span class="cards__item-position">CEO</span>
-                        <p class="cards__item-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
-                        </p>
-                        <a href="mailto:contact@mail.com">
-                            <img src="./assets/images/mail.svg" class="injectable">
-                            contact@mail.com</a>
-                        <a href="tel:505606707">
-                            <img src="./assets/images/phone.svg" class="injectable">
-                            505 606 707</a>
-                    </div>
-                </div>
-                <div id="card2" class="swiper-slide">
-                    <div class="cards__item">
-                        <div class="cards__item-img">
-                            <img src="./assets/images/team.png" alt="Image">
-                        </div>
-                        <p class="cards__item-name">
-                            Adam Kowalski
-                        </p>
-                        <span class="cards__item-position">CEO</span>
-                        <p class="cards__item-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
-                        </p>
-                        <a href="mailto:contact@mail.com">
-                            <img src="./assets/images/mail.svg" class="injectable">
-                            contact@mail.com</a>
-                        <a href="tel:505606707">
-                            <img src="./assets/images/phone.svg" class="injectable">
-                            505 606 707</a>
-                    </div>
-                </div>
-                <div id="card3" class="swiper-slide">
-                    <div class="cards__item">
-                        <div class="cards__item-img">
-                            <img src="./assets/images/team.png" alt="Image">
-                        </div>
-                        <p class="cards__item-name">
-                            Adam Kowalski
-                        </p>
-                        <span class="cards__item-position">CEO</span>
-                        <p class="cards__item-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
-                        </p>
-                        <a href="mailto:contact@mail.com">
-                            <img src="./assets/images/mail.svg" class="injectable">
-                            contact@mail.com</a>
-                        <a href="tel:505606707">
-                            <img src="./assets/images/phone.svg" class="injectable">
-                            505 606 707</a>
-                    </div>
-                </div>
+      <div class="cards__desktop">
+          <div class="cards__item">
+            <div class="cards__item-img">
+              <img src="./assets/images/team.png" alt="Image" />
             </div>
+            <p class="cards__item-name">Adam Kowalski</p>
+            <span class="cards__item-position">CEO</span>
+            <p class="cards__item-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet
+            </p>
+            <a href="mailto:contact@mail.com">
+              <img src="./assets/images/mail.svg" class="injectable" />
+              contact@mail.com</a
+            >
+            <a href="tel:505606707">
+              <img src="./assets/images/phone.svg" class="injectable" />
+              505 606 707</a
+            >
+          </div>
+          <div class="cards__item">
+            <div class="cards__item-img">
+              <img src="./assets/images/team.png" alt="Image" />
+            </div>
+            <p class="cards__item-name">Adam Kowalski</p>
+            <span class="cards__item-position">CEO</span>
+            <p class="cards__item-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet
+            </p>
+            <a href="mailto:contact@mail.com">
+              <img src="./assets/images/mail.svg" class="injectable" />
+              contact@mail.com</a
+            >
+            <a href="tel:505606707">
+              <img src="./assets/images/phone.svg" class="injectable" />
+              505 606 707</a
+            >
+          </div>
+          <div class="cards__item">
+            <div class="cards__item-img">
+              <img src="./assets/images/team.png" alt="Image" />
+            </div>
+            <p class="cards__item-name">Adam Kowalski</p>
+            <span class="cards__item-position">CEO</span>
+            <p class="cards__item-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet
+            </p>
+            <a href="mailto:contact@mail.com">
+              <img src="./assets/images/mail.svg" class="injectable" />
+              contact@mail.com</a
+            >
+            <a href="tel:505606707">
+              <img src="./assets/images/phone.svg" class="injectable" />
+              505 606 707</a
+            >
+          </div>
+      </div>
+      <div class="cards__swiper"  data-aos="fade-up"  data-aos-delay="50">
+        <div class="swiper-wrapper">
+          <div id="card1" class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__item-img">
+                <img src="./assets/images/team.png" alt="Image" />
+              </div>
+              <p class="cards__item-name">Adam Kowalski</p>
+              <span class="cards__item-position">CEO</span>
+              <p class="cards__item-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet
+              </p>
+              <a href="mailto:contact@mail.com">
+                <img src="./assets/images/mail.svg" class="injectable" />
+                contact@mail.com</a
+              >
+              <a href="tel:505606707">
+                <img src="./assets/images/phone.svg" class="injectable" />
+                505 606 707</a
+              >
+            </div>
+          </div>
+          <div id="card2" class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__item-img">
+                <img src="./assets/images/team.png" alt="Image" />
+              </div>
+              <p class="cards__item-name">Adam Kowalski</p>
+              <span class="cards__item-position">CEO</span>
+              <p class="cards__item-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet
+              </p>
+              <a href="mailto:contact@mail.com">
+                <img src="./assets/images/mail.svg" class="injectable" />
+                contact@mail.com</a
+              >
+              <a href="tel:505606707">
+                <img src="./assets/images/phone.svg" class="injectable" />
+                505 606 707</a
+              >
+            </div>
+          </div>
+          <div id="card3" class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__item-img">
+                <img src="./assets/images/team.png" alt="Image" />
+              </div>
+              <p class="cards__item-name">Adam Kowalski</p>
+              <span class="cards__item-position">CEO</span>
+              <p class="cards__item-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet
+              </p>
+              <a href="mailto:contact@mail.com">
+                <img src="./assets/images/mail.svg" class="injectable" />
+                contact@mail.com</a
+              >
+              <a href="tel:505606707">
+                <img src="./assets/images/phone.svg" class="injectable" />
+                505 606 707</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-xl-10 offset-xl-1">
-                    <h2 class="team__title">Our team</h2>
-                </div>
-                <div class="col-12 col-lg-10 col-xl-8 offset-xl-1 offset-xl-2">
-                    <p class="team__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="col-12">
-                    <div class="team__actions">
-                        <a href="#" class="button button--small">iOS</a>
-                        <a href="#" class="button button--small">Python</a>
-                        <a href="#" class="button button--small">UX</a>
-                        <a href="#" class="button button--small">Design</a>
-                        <a href="#" class="button button--small">Technology</a>
-                        <a href="#" class="button button--small">News</a>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="team__list">
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-img">
-                                <img src="./assets/images/team.png" alt="Grafik">
-                            </div>
-                            <span class="team__item-name">Adam Nowak</span>
-                            <span class="team__item-position">Graphic Designer</span>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-10 offset-xl-1"  data-aos="fade-up"  data-aos-delay="50">
+            <h2 class="team__title">Our team</h2>
+          </div>
+          <div class="col-12 col-lg-10 col-xl-8 offset-xl-1 offset-xl-2"  data-aos="fade-up"  data-aos-delay="50">
+            <p class="team__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="col-12"  data-aos="fade-up"  data-aos-delay="50">
+            <div class="team__actions">
+              <a href="#" class="button button--small">iOS</a>
+              <a href="#" class="button button--small">Python</a>
+              <a href="#" class="button button--small">UX</a>
+              <a href="#" class="button button--small">Design</a>
+              <a href="#" class="button button--small">Technology</a>
+              <a href="#" class="button button--small">News</a>
             </div>
+          </div>
+          <div class="col-12 relative"  data-aos="fade-up"  data-aos-delay="50">
+            <div class="team__list-prev">
+              <img src="./assets/images/blue-left.svg" class="injectable" />
+            </div>
+            <div class="team__list-next">
+              <img src="./assets/images/blue-right.svg" class="injectable" />
+            </div>
+            <div class="team__list-pagination"></div>
+            <div class="team__list">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__item">
+                    <div class="team__item-img">
+                      <img src="./assets/images/team.png" alt="Grafik" />
+                    </div>
+                    <span class="team__item-name">Adam Nowak</span>
+                    <span class="team__item-position">Graphic Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__grid">
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+              <div class="team__item">
+                <div class="team__item-img">
+                  <img src="./assets/images/team.png" alt="Grafik" />
+                </div>
+                <span class="team__item-name">Adam Nowak</span>
+                <span class="team__item-position">Graphic Designer</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="gallery__title">Gallery</h2>
-                </div>
-                <div class="col-12 col-lg-10 col-xl-8 offset-xl-1 offset-xl-2">
-                    <p class="gallery__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="gallery__container">
-                    <div class="gallery__item gallery__item--1">
-                        <img src="./assets/images/g1.png">
-                    </div>
-                    <div class="gallery__item gallery__item--alt gallery__item--2">
-                        <img src="./assets/images/g2.png">
-                    </div>
-                    <div class="gallery__item gallery__item--3">
-                        <img src="./assets/images/g3.png">
-                    </div>
-                </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-12"  data-aos="fade-up"  data-aos-delay="50">
+            <h2 class="gallery__title">Gallery</h2>
+          </div>
+          <div class="col-12 col-lg-10 col-xl-8 offset-xl-1 offset-xl-2"  data-aos="fade-up"  data-aos-delay="50">
+            <p class="gallery__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="gallery__container"  data-aos="fade-up"  data-aos-delay="50">
+            <div class="gallery__item gallery__item--1">
+              <img src="./assets/images/g1.png" />
             </div>
+            <div class="gallery__item gallery__item--alt gallery__item--2">
+              <img src="./assets/images/g2.png" />
+            </div>
+            <div class="gallery__item gallery__item--3">
+              <img src="./assets/images/g3.png" />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0">
-                    <div class="footer__info">
-                        <div class="footer__img">
-                            <img src="./assets/images/logo.svg" alt="Logo NetMoon" />
-                        </div>
-                        <ul class="socials">
-                            <li class="socials__item">
-                                <a href="#">
-                                    <img src="./assets/images/youtube.svg" alt="Youtube kanał" class="injectable" />
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a href="#">
-                                    <img src="./assets/images/facebook.svg" alt="Profil na facebook"
-                                        class="injectable" />
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a href="#">
-                                    <img src="./assets/images/messenger.svg" alt="Messenger" class="injectable" />
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a href="#">
-                                    <img src="./assets/images/discord.svg" alt="Discord" class="injectable" />
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a href="#">
-                                    <img src="./assets/images/twitter.svg" alt="Twitter" class="injectable" />
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="loc">
-                            <li class="loc__item loc__item--first">Netmoon</li>
-                            <li class="loc__item">ul. Karatowa 74</li>
-                            <li class="loc__item">Warszawa</li>
-                            <li class="loc__item">02-490 Poland</li>
-                        </ul>
-                        <ul class="footer__contact">
-                            <li class="footer__contact-item">
-                                <img src="./assets/images/phone.svg" class="injectable" />
-                                <a href="tel:+48505606707">505 606 707</a>
-                            </li>
-                            <li class="footer__contact-item">
-                                <img src="./assets/images/mail.svg" class="injectable" />
-                                <a href="mailto:contact@mail.coml">contact@mail.com</a>
-                            </li>
-                        </ul>
-                        <span class="copy">&COPY; 2020 Netmoon</span>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-8 col-xl-6">
-                    <div class="footer__col">
-                        <nav class="footer__menu">
-                            <p class="footer__menu-title">Get in touch</p>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                            </ul>
-                        </nav>
-
-                        <nav class="footer__menu">
-                            <p class="footer__menu-title">Latest News</p>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                            </ul>
-                        </nav>
-
-                        <nav class="footer__menu">
-                            <p class="footer__menu-title">Menu</p>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                                <li class="footer__menu-item"><a href="#">Latest news</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0"  data-aos="fade-up"  data-aos-delay="50">
+            <div class="footer__info">
+              <div class="footer__img">
+                <img src="./assets/images/logo.svg" alt="Logo NetMoon" />
+              </div>
+              <ul class="socials">
+                <li class="socials__item">
+                  <a href="#">
+                    <img
+                      src="./assets/images/youtube.svg"
+                      alt="Youtube kanał"
+                      class="injectable"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#">
+                    <img
+                      src="./assets/images/facebook.svg"
+                      alt="Profil na facebook"
+                      class="injectable"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#">
+                    <img
+                      src="./assets/images/messenger.svg"
+                      alt="Messenger"
+                      class="injectable"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#">
+                    <img
+                      src="./assets/images/discord.svg"
+                      alt="Discord"
+                      class="injectable"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#">
+                    <img
+                      src="./assets/images/twitter.svg"
+                      alt="Twitter"
+                      class="injectable"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <ul class="loc">
+                <li class="loc__item loc__item--first">Netmoon</li>
+                <li class="loc__item">ul. Karatowa 74</li>
+                <li class="loc__item">Warszawa</li>
+                <li class="loc__item">02-490 Poland</li>
+              </ul>
+              <ul class="footer__contact">
+                <li class="footer__contact-item">
+                  <img src="./assets/images/phone.svg" class="injectable" />
+                  <a href="tel:+48505606707">505 606 707</a>
+                </li>
+                <li class="footer__contact-item">
+                  <img src="./assets/images/mail.svg" class="injectable" />
+                  <a href="mailto:contact@mail.coml">contact@mail.com</a>
+                </li>
+              </ul>
+              <span class="copy">&COPY; 2020 Netmoon</span>
             </div>
+          </div>
+          <div class="col-12 col-lg-8 col-xl-6"  data-aos="fade-up"  data-aos-delay="50">
+            <div class="footer__col">
+              <nav class="footer__menu">
+                <p class="footer__menu-title">Get in touch</p>
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer__menu">
+                <p class="footer__menu-title">Latest News</p>
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer__menu">
+                <p class="footer__menu-title">Menu</p>
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                  <li class="footer__menu-item"><a href="#">Latest news</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <div class="arrow-down">
-        <img src="./assets/images/arrow-down.svg" class="injectable" />
+      <img src="./assets/images/arrow-down.svg" class="injectable" />
     </div>
 
     <script src="./assets/js//external/jquery-3.5.1.slim.min.js"></script>
     <script src="./assets/js/external/svg-inject.min.js"></script>
     <script src="./assets/js/external/swiper-bundle.min.js"></script>
     <script src="./assets/js/external/masonry.pkgd.min.js"></script>
-    <script src="https://kit.fontawesome.com/c92cd164f4.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/external/aos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c92cd164f4.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

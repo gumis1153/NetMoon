@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/style/external/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/external/aos.css" />
   <link rel="stylesheet" href="./assets/style/style.css" />
   <title>NetMoon</title>
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png">
@@ -25,7 +26,8 @@
         </a>
       </div>
       <!-- / header__logo -->
-
+      <div class="header__blur"></div>
+      
       <nav id="menu" class="header__menu">
         <ul class="header__menu-list">
           <li class="header__menu-list-item">
@@ -45,11 +47,13 @@
           </li>
           <li class="header__menu-list-item header__menu-list-item--button">
             <a href="#">
-
               <a href="#">
-                <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
+                <img
+                  src="./assets/images/lang-pol.svg"
+                  alt="Wybór języka - polski"
+                  class="injectable"
+                />
               </a>
-
             </a>
           </li>
         </ul>
@@ -61,7 +65,11 @@
 
         <div class="language">
           <a href="#">
-            <img src="./assets/images/lang-pol.svg" alt="Wybór języka - polski" class="injectable">
+            <img
+              src="./assets/images/lang-pol.svg"
+              alt="Wybór języka - polski"
+              class="injectable"
+            />
           </a>
         </div>
       </div>
@@ -77,11 +85,11 @@
   </header>
   <!-- / header -->
 
-  <section class="enter enter--big-btns enter--chart" style="background-image: url(./assets/images/services-bg1.png)">
+  <section class="enter enter--big-btns enter--chart enter--padding-bottom enter--img-1 enter--no-bottom" style="background-image: url(./assets/images/services-bg1.png)">
     <div class="enter__blur">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12"  data-aos="fade-up"  data-aos-delay="50">
             <div class="enter__content">
               <h4 class="enter__subtitle">Services</h4>
               <h2 class="enter__title">How can we help your business?</h2>
@@ -101,29 +109,6 @@
                 <a class="button button--small">Marketing Agency</a>
               </div>
             </div>
-            <div class="col-12">
-              <div class="enter__chart">
-                <div class="enter__chart-item">
-                  <p class="enter__chart-title">Phase 1</p>
-                  <h4 class="enter__chart-name">Product Design</h4>
-                </div>
-                <div class="enter__chart-item">
-                  <p class="enter__chart-title">Phase 2</p>
-                  <h4 class="enter__chart-name">App Development</h4>
-                  <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
-                </div>
-                <div class="enter__chart-item">
-                  <p class="enter__chart-title">Phase 3</p>
-                  <h4 class="enter__chart-name">Testing</h4>
-                  <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
-                </div>
-                <div class="enter__chart-item">
-                  <p class="enter__chart-title">Phase 4</p>
-                  <h4 class="enter__chart-name">Launch</h4>
-                  <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -131,12 +116,43 @@
   </section>
   <!-- / enter -->
 
+  <section class="enter enter--chart">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" data-aos="fade-up"  data-aos-delay="50">
+        <div class="enter__chart">
+          <div class="enter__chart-item">
+            <p class="enter__chart-title">Phase 1</p>
+            <h4 class="enter__chart-name">Product Design</h4>
+          </div>
+          <div class="enter__chart-item">
+            <p class="enter__chart-title">Phase 2</p>
+            <h4 class="enter__chart-name">App Development</h4>
+            <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
+          </div>
+          <div class="enter__chart-item">
+            <p class="enter__chart-title">Phase 3</p>
+            <h4 class="enter__chart-name">Testing</h4>
+            <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
+          </div>
+          <div class="enter__chart-item">
+            <p class="enter__chart-title">Phase 4</p>
+            <h4 class="enter__chart-name">Launch</h4>
+            <img src="./assets/images/Vector.svg" class="injectable enter__chart-icon" />
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+
+
   <section class="feature-list-3">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12" >
           <div class="feature-list-3__list">
-            <div class="feature-list-3__item">
+            <div class="feature-list-3__item"  data-aos="fade-up"  data-aos-delay="50">
               <span class="feature-list-3__item-index">1</span>
               <div class="feature-list-3__item-content">
                 <h4 class="feature-list-3__item-title">Product Design</h4>
@@ -152,7 +168,7 @@
                 <img src="./assets/images/undraw_design_notes_8dmv 1.png" />
               </div>
             </div>
-            <div class="feature-list-3__item">
+            <div class="feature-list-3__item"  data-aos="fade-up"  data-aos-delay="50">
               <span class="feature-list-3__item-index">2</span>
               <div class="feature-list-3__item-content">
                 <h4 class="feature-list-3__item-title">App development</h4>
@@ -168,7 +184,7 @@
                 <img src="./assets/images/undraw_design_notes_8dmv 1.png" />
               </div>
             </div>
-            <div class="feature-list-3__item">
+            <div class="feature-list-3__item"  data-aos="fade-up"  data-aos-delay="50">
               <span class="feature-list-3__item-index">3</span>
               <div class="feature-list-3__item-content">
                 <h4 class="feature-list-3__item-title">Testing</h4>
@@ -184,7 +200,7 @@
                 <img src="./assets/images/undraw_design_notes_8dmv 1.png" />
               </div>
             </div>
-            <div class="feature-list-3__item">
+            <div class="feature-list-3__item"  data-aos="fade-up"  data-aos-delay="50">
               <span class="feature-list-3__item-index">4</span>
               <div class="feature-list-3__item-content">
                 <h4 class="feature-list-3__item-title">Product Design</h4>
@@ -207,145 +223,288 @@
   </section>
   <!-- / feature-list-3 -->
 
-  <section class="feature-list-4">
+  <section class="feature-list-1 feature-list-1--padding">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h4 class="feature-list-4__title">Technologie</h4>
+      <div class="row relative">
+        <div class="col-12"  data-aos="fade-up"  data-aos-delay="50">
+          <h2 class="feature-list-1__title">Technologie</h2>
         </div>
-        <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-          <p class="feature-list-4__desc">
+        <div
+          class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2"
+          data-aos="fade-up"  data-aos-delay="50">
+          <p class="feature-list-1__subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
             ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="feature-list-4__list">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-          <div class="feature-list-4__item">
-            <div class="feature-list-4__item-header">
-              <div class="feature-list-4__item-icon">
-                <img src="./assets/images/mobile-appsvg.svg" />
-              </div>
-              <h4 class="feature-list-4__item-title">Mobile Apps</h4>
-            </div>
-            <p class="feature-list-4__item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="feature-list-4__list-pagin"></div>
-  </section>
 
-  <section class="home-swiper">
+          <div class="feature-list-1__actions">
+            <a id="SHButton" href="#" class="button button--small active"
+                >Softoware House</a
+              >
+              <a id="MAButton" href="#" class="button button--small"
+                >Marketing Agency</a
+              >
+          </div>
+        </div>
+        <div class="feature-list-1__control">
+          <div class="feature-list-1__desktop-swiper-prev">
+            <img src="./assets/images/blue-right.svg" class="injectable" />
+          </div>
+          <div class="feature-list-1__desktop-swiper-next">
+            <img src="./assets/images/blue-left.svg" class="injectable" />
+          </div>
+        </div>
+        <div class="feature-list-1__desktop-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sh">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide ma">
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+              <div class="feature-list-1__item">
+                <div class="feature-list-1__item-img">
+                  <img
+                    src="./assets/images/mobile-appsvg.svg"
+                    alt="Logo NetMoon"
+                    class="injectable"
+                  />
+                </div>
+                <p class="feature-list-1__item-name">Mobile Apps</p>
+                <p class="feature-list-1__item-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-list-1__pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- / feature-list-1 -->
+
+  <section class="home-swiper home-swiper--padding">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -368,14 +527,14 @@
             </div>
             <!-- / home__desktop-swiper-item -->
             <div class="home-swiper__desktop-swiper-item" data-index="2">
-              <div class="home-swiper__desktop-swiper-item-desc">
+              <!-- <div class="home-swiper__desktop-swiper-item-desc">
                 <h3 class="home-swiper__desktop-swiper-item-title">Recent work2</h3>
                 <h2 class="home-swiper__desktop-swiper-item-name">Project Name</h2>
                 <h3 class="home-swiper__desktop-swiper-item-subname">UX/UI Web Dev</h3>
                 <a href="#" class="home-swiper__desktop-swiper-item-link">
                   <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
                 </a>
-              </div>
+              </div> -->
               <div class="home-swiper__desktop-swiper-item-img">
                 <img src="./assets/images/laptop.png" alt="Projekt" />
               </div>
@@ -385,14 +544,14 @@
             </div>
             <!-- / home__desktop-swiper-item -->
             <div class="home-swiper__desktop-swiper-item" data-index="3">
-              <div class="home-swiper__desktop-swiper-item-desc">
+              <!-- <div class="home-swiper__desktop-swiper-item-desc">
                 <h3 class="home-swiper__desktop-swiper-item-title">Recent work3</h3>
                 <h2 class="home-swiper__desktop-swiper-item-name">Project Name</h2>
                 <h3 class="home-swiper__desktop-swiper-item-subname">UX/UI Web Dev</h3>
                 <a href="#" class="home-swiper__desktop-swiper-item-link">
                   <img src="./assets/images/arrow-right.svg" alt="Link do projektu" class="injectable" />
                 </a>
-              </div>
+              </div> -->
               <div class="home-swiper__desktop-swiper-item-img">
                 <img src="./assets/images/laptop.png" alt="Projekt" />
               </div>
@@ -455,13 +614,13 @@
   <section class="feature-list-5">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-xl-10 offset-xl-1">
+        <div class="col-12 col-xl-10 offset-xl-1"  data-aos="fade-up"  data-aos-delay="50">
           <h2 class="feature-list-5__title">Other Services</h2>
         </div>
       </div>
     </div>
 
-    <div class="feature-list-5__list">
+    <div class="feature-list-5__list"  data-aos="fade-up"  data-aos-delay="50">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="feature-list-5__item">
@@ -501,7 +660,7 @@
   <section class="services-1-form">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3"  data-aos="fade-up"  data-aos-delay="50">
           <h2 class="services-1-form__title">
             Start your project!
           </h2>
@@ -521,6 +680,34 @@
             <div class="form-input form-input--textarea">
               <textarea name="" id="" placeholder="Your message"></textarea>
             </div>
+            <div id="budget" class="form-input form-input--checkbox">
+              <label class="checkbox"
+                >Chce określić budżet
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div
+              id="contactRange"
+              class="form-input form-input--range form-input--width"
+            >
+              <!-- <input type="range" /> -->
+              <input
+                type="range"
+                min="500"
+                max="5000"
+                value="2750"
+                class="slider"
+                id="myRange"
+              />
+              <div class="form-input-range">
+                <span>500</span>
+                <span>5000</span>
+              </div>
+              <div class="range-value">
+                <span id="rangeValue">2250</span>
+                PLN
+              </div>
 
 
             <button class="button button--alt button--width">Send</button>
@@ -533,7 +720,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0">
+        <div class="col-12 col-lg-4 col-xxl-4 offset-xl-1 offset-xxl-0"  data-aos="fade-up"  data-aos-delay="50">
           <div class="footer__info">
             <div class="footer__img">
               <img src="./assets/images/logo.svg" alt="Logo NetMoon" />
@@ -584,7 +771,7 @@
             <span class="copy">&COPY; 2020 Netmoon</span>
           </div>
         </div>
-        <div class="col-12 col-lg-8 col-xl-6">
+        <div class="col-12 col-lg-8 col-xl-6"  data-aos="fade-up"  data-aos-delay="50">
           <div class="footer__col">
             <nav class="footer__menu">
               <p class="footer__menu-title">Get in touch</p>
@@ -628,6 +815,8 @@
   <script src="./assets/js//external/jquery-3.5.1.slim.min.js"></script>
   <script src="./assets/js/external/svg-inject.min.js"></script>
   <script src="./assets/js/external/swiper-bundle.min.js"></script>
+  <script src="./assets/js/external/aos.js"></script>
+  <script src="./assets/js/external/countUp.js"></script>
   <script src="./assets/js/external/masonry.pkgd.min.js"></script>
   <script src="./assets/js/swipe.js"></script>
   <script src="https://kit.fontawesome.com/c92cd164f4.js" crossorigin="anonymous"></script>
