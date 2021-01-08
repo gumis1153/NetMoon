@@ -1,0 +1,53 @@
+.coop {
+  padding: 80px 0 15px;
+  overflow: hidden;
+
+  @media #{$lg} {
+    padding: 135px 0 15px;
+  }
+
+  &__title {
+    @extend %text-bigger;
+    @extend %text-bigger--bold;
+    text-align: center;
+
+    @media #{$lg} {
+      font-size: 48px;
+    }
+  }
+
+  &__slider {
+    margin: 35px auto 0;
+    width: 60%;
+
+    @media #{$sm} {
+      overflow: hidden;
+    }
+    @media #{$lg} {
+      margin: 60px auto 0;
+    }
+
+    .swiper-slide {
+      @include flex(center, center, nowrap);
+    }
+  }
+
+  &__item {
+    @include flex(center, center, nowrap);
+    height: 40px;
+
+    @media #{$sm} {
+      height: 52px;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+
+      @media #{$sm} {
+        max-width: 100%;
+      }
+    }
+  }
+}

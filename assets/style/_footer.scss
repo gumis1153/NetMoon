@@ -1,0 +1,85 @@
+.footer {
+  width: 100%;
+  background-color: $color-black;
+  padding: 55px 0 70px;
+
+  @media #{$lg} {
+    padding: 90px 0;
+  }
+
+  &__info {
+    @include flex(flex-start, flex-start, nowrap);
+    flex-direction: column;
+  }
+
+  &__img {
+    align-self: center;
+    width: 60%;
+    margin-bottom: 30px;
+
+    @media #{$lg} {
+      width: 70%;
+      align-self: flex-start;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__contact {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    width: 100%;
+
+    @media #{$lg} {
+      align-items: flex-start;
+    }
+
+    &-item {
+      @include flex(center, center, nowrap);
+      @extend %text;
+      @extend %text--medium;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $color-secondary;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__col {
+    @include flex(space-between, flex-start, nowrap);
+  }
+
+  &__menu {
+    display: none;
+
+    @media #{$lg} {
+      @include flex(flex-start, flex-start, nowrap);
+      flex-direction: column;
+      margin-right: px;
+    }
+
+    &-title {
+      @extend %text-big;
+      @extend %text-big--medium;
+      margin-bottom: 40px;
+    }
+
+    &-list {
+      @include flex(flex-start, flex-start, nowrap);
+      flex-direction: column;
+    }
+
+    &-item {
+      @extend %text;
+      margin-bottom: 8px;
+    }
+  }
+}

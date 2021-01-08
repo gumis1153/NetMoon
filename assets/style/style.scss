@@ -1,0 +1,145 @@
+@import 'variables', 'grid_vars', 'breakpoints', 'reset', 'base', 'typography',
+  'grid', 'mixins', 'global';
+
+@import 'header';
+@import 'home';
+@import 'info';
+@import 'stats';
+@import 'our-team';
+@import 'blog-list';
+@import 'feature-list-1';
+@import 'feature-list-2';
+@import 'feature-list-3';
+@import 'feature-list-4';
+@import 'feature-list-5';
+@import 'services-1-form';
+@import 'home-swiper';
+@import 'team';
+@import 'cards';
+@import 'split-screen';
+@import 'process';
+@import 'newsletter';
+@import 'gallery';
+@import 'post';
+@import 'main-swiper';
+@import 'enter';
+@import 'blog';
+@import 'project';
+@import 'coop';
+@import 'notify';
+@import 'projects';
+@import 'recruit';
+@import 'contact';
+@import 'footer';
+
+body {
+  background-color: $color-bg-2;
+}
+
+.hamburger {
+  position: relative;
+  width: 22px;
+  height: 16px;
+  z-index: 99;
+  cursor: pointer;
+
+  &.open {
+    span {
+      &:nth-of-type(1) {
+        opacity: 0;
+      }
+      &:nth-of-type(2) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:nth-of-type(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &:nth-of-type(4) {
+        opacity: 0;
+      }
+    }
+  }
+
+  span {
+    @include transition();
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-white;
+
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+    }
+    &:nth-of-type(3) {
+      top: 50%;
+    }
+    &:nth-of-type(4) {
+      top: 100%;
+    }
+  }
+}
+
+.socials {
+  @include flex(space-between, center, wrap);
+  width: 100%;
+  margin: 0 auto 40px;
+
+  @media #{$lg} {
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+  }
+
+  &__item {
+    @media #{$lg} {
+      margin: 0 20px 20px 0;
+    }
+    @media #{$xl} {
+      margin: 0 55px 20px 0;
+
+      &:nth-last-of-type(1) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+.loc {
+  @include flex(flex-start, center, nowrap);
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media #{$lg} {
+    align-items: flex-start;
+  }
+
+  &__item {
+    @extend %text;
+    @extend %text--medium;
+    text-transform: uppercase;
+    color: $color-secondary;
+
+    &--first {
+      color: $color-white;
+    }
+  }
+}
+
+.copy {
+  @extend %text;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 40px;
+
+  @media #{$lg} {
+    text-align: left;
+  }
+}

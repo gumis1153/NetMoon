@@ -1,0 +1,105 @@
+.feature-list-4 {
+  padding: 75px 0;
+
+  @media #{$md} {
+    padding: 0;
+  }
+
+  &__title {
+    @extend %text-title;
+    @extend %text-title--bold;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+
+  &__desc {
+    @extend %text-static-18;
+    @extend %text-static-18--medium;
+    text-align: center;
+    width: 80%;
+    margin: 15px auto 55px;
+
+    @media #{$md} {
+      margin: 0 auto 105px;
+    }
+  }
+
+  &__list {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @media #{$md} {
+      width: 90%;
+    }
+    @media #{$xl} {
+      width: 64%;
+    }
+
+    &-pagin {
+      @include flex(center, center, wrap);
+      .swiper-pagination-bullet {
+        @include transition();
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 2px solid $color-white;
+        margin: 0 5px 5px;
+
+        &-active {
+          background-color: $color-white;
+        }
+      }
+
+      @media #{$lg} {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    @include flex(center, flex-start, nowrap);
+    flex-direction: column;
+    background-color: $color-swiper-item;
+    min-height: 209px;
+    padding: 40px 65px;
+    border-radius: 40px;
+    margin-bottom: 30px;
+
+    @media #{$md} {
+      padding: 48px 65px;
+    }
+
+    &-header {
+      @include flex(flex-start, center, nowap);
+      margin-bottom: 25px;
+    }
+
+    &-icon {
+      height: 35px;
+      margin-right: 20px;
+
+      img,
+      svg {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+
+    &-title {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+    }
+
+    &-desc {
+      @extend %text;
+      @extend %text--medium;
+      color: $color-secondary;
+    }
+  }
+}

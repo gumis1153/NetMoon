@@ -1,0 +1,192 @@
+.team {
+  overflow: hidden;
+
+  @media #{$md} {
+    padding: 35px 0;
+  }
+
+  &__title {
+    @extend %text-huge;
+    @extend %text-huge--bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px
+  }
+
+  &__desc {
+    @extend %text-static-18;
+    @extend %text-static-18--medium;
+    text-align: center;
+    color: $color-secondary;
+    width: 80%;
+    margin: 0 auto 40px;
+
+    @media #{$lg} {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__actions {
+    @include flex(center, center, wrap);
+    margin-bottom: 80px;
+
+    .button {
+      margin: 0 10px 10px;
+    }
+  }
+  
+  &__grid {
+    display: none;
+
+    @media #{$xl} {
+      width: 95%;
+      margin: 10px auto 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 30px;
+      row-gap: 60px;
+    }
+  }
+
+  &__list {
+    height: 750px;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+
+    @media #{$lg} {
+      width: 90%;
+    }
+    @media #{$xl} {
+     display: none;
+    }
+
+    .swiper-slide {
+      @include flex(center, center, nowrap);
+      height: calc(33.333% - 60px);
+
+      @media #{$md} {
+        height: calc(33.333% - 50px);
+      }
+      @media #{$xl} {
+        margin: 0 !important;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &-prev,
+    &-next {
+      width: 14px;
+      height: 21px;
+      position: absolute;
+      top: calc(50% - 100px);
+
+      @media #{$xl} {
+        display: none;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-prev {
+      left: 10px;
+    }
+
+    &-next {
+      right: 10px;
+    }
+
+    &-pagination {
+      @include flex(center, center, nowrap);
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      z-index: 9;
+
+      @media #{$xl} {
+        display: none;
+      }
+
+      .swiper-pagination-bullet {
+        @include transition();
+        width: 20px;
+        height: 20px;
+        border: 2px solid $color-white;
+        opacity: 1;
+        background-color: $color-bg-1;
+        margin: 0 5px;
+
+        &-active {
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+    width: 120px;
+
+    @media #{$xl} {
+      width: 100%;
+    }
+
+    &-img {
+      width: 100%;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      @media #{$md} {
+        width: 148px;
+        margin-bottom: 15px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-name {
+      @extend %text-static-18;
+      @extend %text-static-18--bold;
+      margin-bottom: 5px;
+      text-align: center;
+
+      @media #{$xl} {
+        font-size: 24px;
+      }
+    }
+
+    &-position {
+      @extend %text;
+      @extend %text--bold;
+      font-size: 12px;
+      color: $color-extra;
+      text-align: center;
+
+      @media #{$xl} {
+        font-size: 14px;
+      }
+    }
+  }
+}

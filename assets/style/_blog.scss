@@ -1,0 +1,28 @@
+.blog {
+  width: 100%;
+  margin-top: 185px;
+  margin-bottom: 30px;
+
+  @media #{$md} {
+    padding-bottom: 135px;
+  }
+  @media #{$xl} {
+    margin-top: -220px;
+  }
+
+  &__masonry {
+    .blog-list {
+      &__item {
+        @media #{$lg} {
+          width: 429px;
+        }
+        @media #{$xl} {
+          width: 331px;
+        }
+        @media #{$xxl} {
+          width: 350px;
+        }
+      }
+    }
+  }
+}

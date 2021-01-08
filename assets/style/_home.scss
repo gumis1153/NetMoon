@@ -1,0 +1,147 @@
+.home {
+  @include flex(flex-start, center, nowrap);
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-image: url("../images/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: 10% -515px;
+  padding: 175px 0 10px;
+  overflow: hidden;
+
+  @media #{$lg} {
+    background-size: auto;
+  }
+  @media #{$xl} {
+    background-image: none;
+    padding-bottom: 420px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba($color-bg-2, 0) 50%,
+      rgba($color-bg-2, 1) 100%
+    );
+  }
+  &::before {
+    @media #{$xl} {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-bottom: 200px;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/home-bg.png");
+      background-repeat: no-repeat;
+      background-position: 10% -375px;
+      padding: 175px 0 10px;
+    }
+  }
+
+  &__container {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+
+    @media #{$lg} {
+      flex-direction: row;
+      width: 82%;
+    }
+  }
+
+  &__img {
+    @include flex(center, center, nowrap);
+    width: 60%;
+    margin: 0 auto 40px;
+
+    @media #{$lg} {
+      margin: 100px 0 0 0;
+      width: 50%;
+      margin-left: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+
+      @media #{$lg} {
+        width: 70%;
+      }
+    }
+  }
+
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+
+    @media #{$lg} {
+      margin: 100px 0 0 0;
+      width: 50%;
+    }
+
+    h1 {
+      @extend %text-big;
+      @extend %text-big--medium;
+      @extend %text-big--title;
+      text-align: center;
+      line-height: 112.5%;
+      margin-bottom: 45px;
+
+      @media #{$lg} {
+        text-align: left;
+      }
+    }
+
+    p {
+      @extend %text-medium;
+      text-align: center;
+      line-height: 1.2;
+      width: 100%;
+      margin: 0 auto 70px;
+
+      @media #{$lg} {
+        text-align: left;
+      }
+    }
+  }
+
+  &__actions {
+    @include flex(flex-start, stretch, nowrap);
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    @media #{$md} {
+      justify-content: center;
+      flex-direction: row;
+    }
+    @media #{$lg} {
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    .button {
+      margin-bottom: 20px;
+      min-width: 177px;
+      padding: 0 10px;
+
+      @media #{$md} {
+        margin: 0 10px;
+      }
+      @media #{$lg} {
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+}

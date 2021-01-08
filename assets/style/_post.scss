@@ -1,0 +1,129 @@
+.post {
+  padding: 100px 0 0 0;
+
+  @media #{$sm} {
+    padding: 250px 0 0 0;
+  }
+
+  &__box {
+    position: relative;
+    background-color: $color-white;
+    margin: 0 auto;
+    padding: 65px 50px 190px;
+    border-radius: 40px;
+    z-index: 9;
+
+    @media #{$sm} {
+      width: 90%;
+    }
+
+    @media #{$lg} {
+      padding: 90px 115px 110px;
+    }
+
+    @media #{$xl} {
+      padding: 90px 115px 110px;
+      width: 80%;
+    }
+    @media #{$xxl} {
+      width: 60%;
+    }
+  }
+
+  &__subtitle {
+    @extend %text-medium;
+    @extend %text-medium--medium;
+    color: $color-extra;
+    margin-bottom: 35px;
+
+    @media #{$lg} {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__title {
+    @extend %text-huge;
+    @extend %text-huge--bold;
+    color: $color-black;
+    margin-bottom: 35px;
+  }
+
+  &__author {
+    @include flex(center, flex-start, wrap);
+    flex-direction: column;
+    height: 48px;
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+
+    @media #{$lg} {
+      top: 90px;
+      right: 100px;
+      transform: translateX(-50%);
+    }
+
+    &-name {
+      @extend %text;
+      @extend %text--bold;
+      font-size: 13px;
+      color: $color-black;
+      margin-right: 15px;
+    }
+
+    &-date {
+      @extend %text;
+      @extend %text--medium;
+      color: $color-black;
+      margin: 0 15px 0 auto;
+    }
+
+    &-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__text {
+    @extend %text;
+    @extend %text--medium;
+    color: $color-secondary;
+
+    @media #{$lg} {
+      font-size: 18px;
+    }
+  }
+
+  &__back {
+    @include transition();
+    @include flex(center, center, nowrap);
+    @extend %text;
+    @extend %text--bold;
+    margin-top: -100px;
+    font-size: 48px;
+    flex-direction: column;
+    width: 100%;
+    padding: 165px 0 100px;
+    background-color: $color-extra;
+
+    &:hover {
+      background-color: $color-bg-1;
+
+      svg {
+        transform: translateX(-10px);
+      }
+    }
+
+    svg {
+      @include transition();
+      margin-top: 10px;
+    }
+  }
+}

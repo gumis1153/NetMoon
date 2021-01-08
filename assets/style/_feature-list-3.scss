@@ -1,0 +1,172 @@
+.feature-list-3 {
+  margin-top: 45px;
+
+  &__list {
+    @include flex(flex-start, center, nowarap);
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+
+    @media #{$lg} {
+      width: 86%;
+    }
+  }
+
+  &__item {
+    @include flex(space-between, center, nowarap);
+    flex-direction: column-reverse;
+    margin-bottom: 70px;
+    position: relative;
+
+    @media #{$md} {
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
+
+    &:nth-child(even) {
+      @media #{$md} {
+        flex-direction: row-reverse;
+      }
+
+      .feature-list-3 {
+        &__item {
+          &-index {
+            top: 140px;
+            left: -25px;
+
+            @media #{$md} {
+              left: auto;
+              right: -85px;
+              top: -60px;
+            }
+          }
+
+          &-title {
+            text-align: right;
+            margin-left: auto;
+
+            @media #{$md} {
+              margin-left: 0;
+              width: 100%;
+              text-align: left;
+            }
+          }
+
+          &-text {
+            width: 90%;
+            text-align: right;
+            margin-left: auto;
+
+            @media #{$md} {
+              margin-left: 0;
+              width: 100%;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    &-index {
+      position: absolute;
+      top: 160px;
+      right: -10px;
+      font-size: 144px;
+      font-weight: 700;
+      color: #202430;
+
+      @media #{$md} {
+        right: auto;
+        top: -50px;
+        left: -85px;
+        font-size: 350px;
+      }
+    }
+
+    &-content {
+      @include flex(flex-start, flex-start, nowarap);
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+
+      @media #{$md} {
+        width: 39%;
+      }
+    }
+
+    &-title {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      @extend %text-static-18;
+      @extend %text-static-18--bold;
+      color: $color-secondary;
+      width: 90%;
+
+      @media #{$md} {
+        width: 100%;
+      }
+    }
+
+    &-img {
+      width: 80%;
+      margin: 0 auto 40px;
+
+      @media #{$md} {
+        width: 44%;
+        margin: 40px 0 0 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &--single {
+    margin-top: -360px;
+
+    @media #{$md} {
+      margin-top: -320px;
+    }
+
+    .feature-list-3 {
+      &__item {
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+
+        @media #{$md} {
+          flex-direction: row-reverse;
+          margin-bottom: 70px;
+        }
+
+        &-title {
+          font-size: 36px;
+          text-align: center;
+          width: 100%;
+
+          @media #{$sm} {
+            font-size: 24px;
+            text-align: left;
+            width: auto;
+          }
+        }
+
+        &-text {
+          text-align: center;
+          width: 100%;
+
+          @media #{$sm} {
+            text-align: left;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

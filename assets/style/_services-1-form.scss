@@ -1,0 +1,47 @@
+.services-1-form {
+  padding: 100px 0;
+
+  &__title {
+    @extend %text-title;
+    @extend %text-title--bold;
+    text-align: center;
+    margin-bottom: 35px;
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+
+  &__desc {
+    @extend %text-medium;
+    @extend %text-medium--medium;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form {
+    margin: 50px auto;
+    width: 90%;
+
+    .button {
+        width: 100%;
+        margin: 15px auto 0;
+    }
+  }
+
+  &--alt {
+    background-color: $color-black;
+
+    .form-input--range::after {
+      background-color: rgba($color-black, 0.7);
+
+    }
+  }
+
+  &--padding {
+    @media #{$xl} {
+      padding: 130px 0;
+    }
+  }
+}

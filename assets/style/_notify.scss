@@ -1,0 +1,110 @@
+$padding-top: 420px;
+
+.notify {
+  padding-top: $padding-top * 0.75;
+  overflow: hidden;
+  padding-bottom: 50px;
+
+  @media #{$md} {
+    padding-top: $padding-top * 0.8;
+  }
+  @media #{$lg} {
+    padding-top: $padding-top * 0.9;
+  }
+  @media #{$xl} {
+    padding-top: $padding-top;
+  }
+
+  &__error-number {
+    font-size: 220px;
+    color: #242430;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    z-index: -1;
+
+    @media #{$md} {
+      font-size: 400px;
+      transform: translate(-50%, -50%);
+    }
+    @media #{$lg} {
+      font-size: 500px;
+    }
+  }
+
+  &__img {
+    width: 85%;
+    margin: 0 auto;
+    z-index: 9;
+
+    @media #{$xl} {
+      width: 75%;
+    }
+
+    img,
+    svg {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__desc {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+
+    @media #{$md} {
+      margin-top: 25px;
+    }
+
+    &-title,
+    &-desc {
+      text-align: center;
+    }
+
+    &-title {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      color: $color-extra;
+      margin-bottom: 20px;
+
+      @media #{$md} {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-desc {
+      @extend %text;
+      text-transform: uppercase;
+      color: $color-secondary;
+    }
+  }
+
+  &__actions {
+    @include flex(center, center, nowrap);
+    width: 100%;
+    margin-top: 25px;
+
+    @media #{$md} {
+      margin-top: 20px;
+    }
+
+    .button {
+      height: 53px;
+      width: 80%;
+      font-size: 18px;
+
+      @media #{$sm} {
+        width: auto;
+      }
+      @media #{$md} {
+        height: 37px;
+        font-size: 13px;
+      }
+    }
+  }
+}

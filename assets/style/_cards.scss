@@ -1,0 +1,150 @@
+.cards {
+  padding: 35px 0 65px;
+  overflow: hidden;
+
+  @media #{$md} {
+    padding: 100px 0 65px;
+  }
+  @media #{$lg} {
+    padding: 160px 0 65px;
+  }
+  @media #{$xl} {
+    padding: 220px 0 65px;
+  }
+
+  &__desktop {
+    display: none;
+    @media #{$lg} {
+      @include flex(center, center, nowrap);
+
+      .cards {
+        &__item {
+          width: 407px;
+
+          &:nth-of-type(2) {
+            box-shadow: 0 4px 54px rgba(#000, 0.25);
+            z-index: 9;
+          }
+
+          &:nth-of-type(1),
+          &:nth-last-of-type(1) {
+            transform: scale(0.9);
+          }
+
+          &:nth-of-type(1) {
+            margin-right: -50px;
+          }
+
+          &:nth-last-of-type(1) {
+            margin-left: -50px;
+          }
+        }
+      }
+     }
+  }
+
+  &__swiper {
+    @include flex(center, center, nowrap);
+    width: 252px;
+    margin: 0 auto;
+
+    @media #{$lg} {
+      display: none;
+    }
+
+    .swiper-slide {
+      width: 252px;
+    }
+  }
+
+  &__item {
+    @include flex(flex-start, center, nowrap);
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: $color-white;
+    padding: 35px 10px;
+    width: 252px;
+    border-radius: 40px;
+
+    @media #{$lg} {
+      width: 100%;
+      padding: 55px 60px 35px;
+    }
+
+    &-img {
+      border-radius: 9999px;
+      overflow: hidden;
+      width: 135px;
+      height: 135px;
+      margin-bottom: 10px;
+
+      @media #{$lg} {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 25px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      color: $color-bg-1;
+      text-align: center;
+
+      @media #{$md} {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-position {
+      @extend %text-static-18;
+      @extend %text-static-18--bold;
+      color: $color-bg-1;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @media #{$lg} {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-desc {
+      @extend %text-static-18;
+      @extend %text-static-18--medium;
+      font-size: 13px;
+      color: $color-secondary;
+      text-align: center;
+      line-height: 125.5%;
+      margin-bottom: 25px;
+      width: 70%;
+
+      @media #{$lg} {
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+
+    a {
+      @include flex(flex-start, center, nowrap);
+      @extend %text;
+      @extend %text--bold;
+      text-transform: uppercase;
+      color: $color-extra;
+      margin-bottom: 10px;
+
+      @media #{$md} {
+        margin-bottom: 10px;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+}

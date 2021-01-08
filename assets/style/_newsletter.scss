@@ -1,0 +1,100 @@
+.newsletter {
+  padding: 45px 0;
+  background-color: $color-extra;
+
+  &__container {
+    @include flex(space-between, center, nowrap);
+    flex-direction: column;
+
+    @media #{$md} {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    @include flex(flex-start, flex-start, nowrap);
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @media #{$md} {
+      width: 49%;
+      margin-bottom: 0;
+    }
+
+    &-header {
+      @extend %text;
+      @extend %text--bold;
+      text-align: center;
+      width: 100%;
+
+      @media #{$md} {
+        width: auto;
+        text-align: left;
+      }
+    }
+
+    &-bottom {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      text-align: center;
+      width: 100%;
+
+      @media #{$md} {
+        width: auto;
+        text-align: left;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    @media #{$md} {
+      width: 49%;
+    }
+  }
+
+  &__input {
+    position: relative;
+    height: 57px;
+    width: 100%;
+    background-color: $color-white;
+    border-radius: 30px;
+    overflow: hidden;
+
+    input {
+      @extend %text;
+      @extend %text--bold;
+      color: $color-extra;
+      width: 100%;
+      height: 100%;
+      padding: 0 50px 0 30px;
+
+      &::-webkit-input-placeholder {
+        color: $color-extra;
+      }
+    }
+
+    &-submit {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        i {
+          color: $color-bg-1;
+        }
+      }
+      i {
+        @include transition();
+        color: $color-extra;
+        font-size: 20px;
+      }
+    }
+  }
+}

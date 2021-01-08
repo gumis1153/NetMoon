@@ -1,0 +1,13 @@
+@mixin flex($justifyEl, $alignEl, $wrapEl) {
+  justify-content: #{$justifyEl};
+  align-items: #{$alignEl};
+  flex-wrap: #{$wrapEl};
+  display: flex;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}

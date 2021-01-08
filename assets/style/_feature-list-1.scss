@@ -1,0 +1,310 @@
+.feature-list-1 {
+  padding: 80px 0;
+  overflow: hidden;
+
+  @media #{$md} {
+    padding: 100px 0;
+  }
+  @media #{$lg} {
+    padding: 155px 0 50px;
+  }
+  @media #{$xl} {
+    padding: 160px 0 50px;
+  }
+
+  &__title {
+    @extend %text-huge;
+    @extend %text-huge--bold;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @extend %text-medium;
+    text-align: center;
+    padding: 0 20px;
+    margin: 45px auto 0;
+
+    @media #{$lg} {
+      margin: 30px auto 0;
+      padding: 0;
+    }
+    @media #{$xl} {
+      width: 80%;
+    }
+  }
+
+  &__actions {
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+    margin-top: 55px;
+
+    @media #{$sm} {
+      flex-direction: row;
+    }
+    @media #{$xl} {
+      margin-top: 40px;
+    }
+
+    .button {
+      margin-bottom: 10px;
+      height: 53px;
+      width: 80%;
+      line-height: 2.8;
+      font-size: 18px;
+      z-index: 9;
+
+      @media #{$sm} {
+        font-size: 14px;
+        margin: 0 10px;
+        height: 37px;
+        line-height: 2.6;
+        width: auto;
+      }
+    }
+  }
+
+  &__pagination {
+    @include flex(center, center, nowrap);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 9;
+
+    @media #{$md} {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      @include transition();
+      width: 20px;
+      height: 20px;
+      border: 2px solid $color-white;
+      opacity: 1;
+      margin: 0 5px;
+      background-color: $color-bg-1;
+
+      &-active {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__desktop-swiper {
+    overflow: hidden;
+    width: 90%;
+    margin: 30px auto 0;
+    padding-bottom: 50px;
+
+    @media #{$sm} {
+      margin: 30px auto 0;
+      width: 80%;
+    }
+    @media #{$xl} {
+      width: 60%;
+    }
+
+    &-prev,
+    &-next {
+      @include transition();
+      width: 14px;
+      height: 21px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      display: none;
+
+      @media #{$md} {
+        display: block;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-prev {
+      right: 5%;
+
+      @media #{$xl} {
+        right: 15%;
+      }
+    }
+
+    &-next {
+      left: 5%;
+
+      @media #{$xl} {
+        left: 15%;
+      }
+    }
+
+    .swiper-slide {
+      @include flex(space-between, flex-start, wrap);
+      width: 100%;
+    }
+
+    &--alt {
+      @media #{$xl} {
+        margin: 35px auto 20px !important;
+    }
+
+      .feature-list-1 {
+        &__item {
+          @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 65px 55px 20px;
+          }
+
+          &-img {
+            @media (max-width: 768px) {
+              height: 88px;
+            }
+          }
+
+          &-name {
+            @media (max-width: 768px) {
+              margin-left: 0;
+              margin-top: 20px;
+              margin-bottom: 30px;
+            }
+          }
+
+          &-desc {
+            @media (max-width: 768px) {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__control {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    @include flex(flex-start, center, wrap);
+    width: 100%;
+    background-color: $color-swiper-item;
+    overflow: hidden;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 45px 25px 55px;
+    margin-bottom: 25px;
+
+    @media (min-width: 380px) {
+      padding: 45px 55px 55px;
+    }
+    @media #{$md} {
+      @include flex(center, center, wrap);
+      flex-direction: column;
+      padding: 60px 20px 40px;
+      margin-bottom: 25px;
+      width: 45%;
+    }
+    @media #{$lg} {
+      width: 31%;
+    }
+
+    &-img {
+      height: 31px;
+      width: auto;
+      @media #{$md} {
+        margin-bottom: 5px;
+      }
+      @media #{$lg} {
+        margin-left: 0;
+        margin-bottom: 15px;
+        margin-top: 0;
+        height: 60px;
+      }
+
+      img,
+      svg {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      @extend %text-bigger;
+      @extend %text-bigger--bold;
+      margin-left: 20px;
+
+      @media #{$md} {
+        width: auto;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &-desc {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      @extend %text;
+      margin-top: 20px;
+
+      @media #{$md} {
+        margin: 10px auto 0;
+        text-align: center;
+        width: 75%;
+      }
+    }
+  }
+
+  &--padding {
+    padding: 30px 0;
+
+    @media #{$xl} {
+      padding: 80px 0;
+    }
+  }
+
+  &--padding-2 {
+    padding: 45px 0;
+
+    @media #{$xl} {
+      padding: 80px 0;
+    }
+
+    .feature-list-1 {
+      &__desktop-swiper {
+        margin: 70px auto 20px;
+      }
+    }
+  }
+
+  &--minus-margin {
+    @media #{$xl} {
+      margin-top: -590px;
+    }
+  }
+
+  &--bottom {
+    @media #{$xl} {
+      padding: 160px 0 20px;
+    }
+  }
+}
